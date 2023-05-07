@@ -13,7 +13,11 @@
     </style>
 </head>
 <body>
+    <h1>red-what?</h1>
+    <p>Um aplicativo que usa inteligencia artificial para diferenciar entre um Martelo Vermelho, um iPhone Vermelho ou um RedBull</p>
+    <p></p>
     <input id="photo" type="file" accept="image/*;capture=camera">
+    <p></p>
     <div id="results"></div>
     <script>
         async function loaded(reader) {
@@ -23,7 +27,7 @@
             });
             const json = await response.json();
             const label = json['data'][0]['confidences'][0]['label'];
-            results.innerHTML = `<br/><img src="${reader.result}" width="300"> <p>${label}</p>`
+            results.innerHTML = `<br/><img src="${reader.result}" width="300"> <p>${label}</p><p>Não me julgue pelos meus erros,</p><p>Mas sim pelos meus acertos</p>`
         }
         function read() {
             const reader = new FileReader();
