@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Red What&#x2753;</title>
     <style>
         img {
             height: 200px;
@@ -13,8 +13,8 @@
     </style>
 </head>
 <body>
-    <h1>red-what?</h1>
-    <p>Um aplicativo que usa inteligencia artificial para diferenciar entre um Martelo Vermelho, um iPhone Vermelho ou um RedBull</p>
+    <h1>Red What&#x2753;</h1>
+    <p>Um aplicativo que usa inteligencia artificial para diferenciar entre um <strong>Martelo <span style="color:red;">Vermelho</span></strong>, um <strong>iPhone <span style="color:red;">Vermelho</span></strong> ou um <strong><span style="color:red;">Red</span>Bull</strong></p>
     <p></p>
     <input id="photo" type="file" accept="image/*;capture=camera">
     <p></p>
@@ -27,7 +27,7 @@
             });
             const json = await response.json();
             const label = json['data'][0]['confidences'][0]['label'];
-            results.innerHTML = `<br/><img src="${reader.result}" width="300"> <p>${label}</p><p>Não me julgue pelos meus erros,</p><p>Mas sim pelos meus acertos</p>`
+            results.innerHTML = `<br/><img src="${reader.result}" width="300"> <p style = "background:red">${label}</p><p>Não me julgue pelos meus erros,</p><p>Mas sim pelos meus acertos</p>`
         }
         function read() {
             const reader = new FileReader();
